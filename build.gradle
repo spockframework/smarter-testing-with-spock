@@ -1,0 +1,20 @@
+apply plugin: "groovy"
+apply plugin: "idea"
+apply plugin: "eclipse"
+
+repositories {
+    mavenCentral()
+    maven { url "http://m2repo.spockframework.org/snapshots" }
+}
+
+dependencies {
+    groovy "org.codehaus.groovy:groovy-all:1.8.5"
+    testCompile "org.spockframework:spock-core:0.6-groovy-1.8-SNAPSHOT"
+    testRuntime "com.h2database:h2:1.2.147"
+}
+
+idea.project.jdkName = "1.6"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0-milestone-6'
+}
