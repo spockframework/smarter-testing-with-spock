@@ -7,7 +7,7 @@ import org.junit.rules.TemporaryFolder
 import spock.lang.Shared
 
 class JUnitRules extends Specification {
-    @Rule tempFolder = new TemporaryFolder()
+    @Rule TemporaryFolder tempFolder
     @Shared File file
 
     def "a file based test"() {
