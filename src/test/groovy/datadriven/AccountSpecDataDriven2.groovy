@@ -4,8 +4,9 @@ import spock.lang.Specification
 import spock.lang.Unroll
 import state.Account
 
+@Unroll
 class AccountSpecDataDriven2 extends Specification {
-    @Unroll "withdrawing #withdrawn from account with balance #balance"() {
+    def "withdrawing #withdrawn from account with balance #balance"() {
         given:
         def account = new Account(balance)
 
