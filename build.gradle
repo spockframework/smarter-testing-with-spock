@@ -4,7 +4,6 @@ apply plugin: "eclipse"
 
 repositories {
     mavenCentral()
-    maven { url "http://m2repo.spockframework.org/snapshots" }
 }
 
 dependencies {
@@ -16,5 +15,5 @@ dependencies {
 idea.project.jdkName = "1.6"
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.0-milestone-9'
+    gradleVersion = '1.0-rc-3'
 }

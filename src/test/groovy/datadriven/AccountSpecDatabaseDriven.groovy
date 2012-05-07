@@ -7,6 +7,7 @@ import groovy.sql.Sql
 import spock.lang.Unroll
 import state.Account
 
+@Unroll
 class AccountSpecDatabaseDriven extends Specification {
     @Shared sql = Sql.newInstance("jdbc:h2:mem:", "org.h2.Driver")
 
@@ -15,7 +16,7 @@ class AccountSpecDatabaseDriven extends Specification {
         sql.execute("insert into accountdata values (1, 5.0, 2.0, 3.0), (2, 4.0, 0.0, 4.0), (3, 4.0, 4.0, 0.0)")
     }
 
-    @Unroll "withdrawing #withdrawn from account with balance #balance leaves #remaining"() {
+    def "withdrawing #withdrawn from account with balance #balance leaves #remaining"() {
         given:
         def account = new Account(balance)
 
