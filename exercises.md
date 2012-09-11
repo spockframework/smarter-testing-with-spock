@@ -37,7 +37,7 @@ Data Driven Testing (15 min)
 Interaction Based Testing (15 min)
 ----------------------------------
 
-3. 
+3.  
 
 Extensions (15 min)
 -------------------
