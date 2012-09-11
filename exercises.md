@@ -37,7 +37,10 @@ Data Driven Testing (15 min)
 Interaction Based Testing (15 min)
 ----------------------------------
 
-3.  
+3. CodeMaker Workshop
+
+  a. Fill in the methods in `exercise/CodeMakerSpec.groovy` and describe the interactions between a `CodeMaker` (the class under specification) and a `Workshop` (the collaborator). The latter classes are declared in `exercise/CodeMaker.groovy`. 
+  b. Introduce a few bugs into how `CodeMaker` interacts with `Workshop`. Execute the spec and study the failure messages.
 
 Extensions (15 min)
 -------------------
