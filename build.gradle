@@ -4,16 +4,22 @@ apply plugin: "eclipse"
 
 repositories {
     mavenCentral()
+	maven { url 'http://oss.sonatype.org/content/repositories/snapshots/' }
 }
 
 dependencies {
-    groovy "org.codehaus.groovy:groovy-all:1.8.6"
-    testCompile "org.spockframework:spock-core:0.6-groovy-1.8"
-    testRuntime "com.h2database:h2:1.2.147"
+    groovy "org.codehaus.groovy:groovy-all:2.0.2"
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0-SNAPSHOT"
+    testRuntime "com.h2database:h2:1.3.168"
 }
 
-idea.project.jdkName = "1.6"
+tasks.withType(Test) {
+    testLogging {
+        events "passed", "failed", "skipped", "standardOut", "standardError"
+        showExceptions true
+    }
+}
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.0-rc-3'
+    gradleVersion '1.2-rc-1'
 }
