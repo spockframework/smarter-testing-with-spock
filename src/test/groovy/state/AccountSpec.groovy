@@ -3,7 +3,7 @@ package state
 import spock.lang.Specification
 
 class AccountSpec extends Specification {
-    def "withdraw some amount"() {
+    void withdrawSomeAmount() {
         given:
         Account account = new Account(BigDecimal.valueOf(5));
 
