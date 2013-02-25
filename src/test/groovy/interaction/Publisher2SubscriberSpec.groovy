@@ -2,7 +2,7 @@ package interaction
 
 import spock.lang.Specification
 
-class PublisherSubscriber2Spec extends Specification {
+class Publisher2SubscriberSpec extends Specification {
     def pub = new Publisher2()
     def sub1 = Mock(Subscriber2)
     def sub2 = Mock(Subscriber2)
