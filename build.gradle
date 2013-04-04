@@ -17,11 +17,11 @@ dependencies {
 
 tasks.withType(Test) {
     testLogging {
-        events "started", "passed", "failed", "skipped", "standardOut", "standardError"
+        events "passed", "failed", "skipped", "standardOut", "standardError"
         showExceptions true
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion "1.4"
+    gradleVersion "1.5"
 }
